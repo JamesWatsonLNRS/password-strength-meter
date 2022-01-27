@@ -228,7 +228,11 @@
 
       // Validation from conditions
       var passed = 0;
-      var requiredPassed = false;
+      if (options.conditionsRequired.length) {
+        var requiredPassed = false;
+      } else {
+        var requiredPassed = true;
+      }
       // Lower Case 
       if (passwordState.hasLowercase) {
         passed++;
